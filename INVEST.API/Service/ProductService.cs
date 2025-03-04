@@ -67,7 +67,7 @@ namespace INVEST.API.Service
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao atualizar os registros", ex);
+                throw new Exception("Ocorreu um erro ao validar os registros", ex);
             }
         }
     }

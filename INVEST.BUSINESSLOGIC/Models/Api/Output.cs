@@ -8,6 +8,6 @@
 
         public string MessageCode { get; set; }
 
-        public List<Error> Errors { get; set; }
+        public List<Error> Errors { get; set; } = new List<Error>();
     }
 }

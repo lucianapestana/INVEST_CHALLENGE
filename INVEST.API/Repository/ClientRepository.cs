@@ -24,7 +24,7 @@ namespace INVEST.API.Repository
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao efetuar o login.", ex);
+                throw new Exception("Ocorreu um erro ao efetuar o login", ex);
             }
         }
 
@@ -70,7 +70,7 @@ namespace INVEST.API.Repository
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao efetuar o login.", ex);
+                throw new Exception("Ocorreu um erro ao obter os registros", ex);
             }
         }
     }

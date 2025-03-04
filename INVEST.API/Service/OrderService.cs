@@ -32,7 +32,7 @@ namespace INVEST.API.Service
 
                 var outputProduct = await _productService.ValidateProductStockOrder(input.ProductId, input.ProductQuantity);
 
-                if (outputProduct.Errors != null)
+                if (outputProduct.Errors != null && outputProduct.Errors?.Count > 0)
                 {
                     output.Errors.AddRange(outputProduct.Errors);
                     return output;
@@ -42,7 +42,7 @@ namespace INVEST.API.Service
                 {
                     var outputAccount = await _accountClientService.ValidateBalanceAccountClientOrder(input.AccountClientId, outputProduct.Product.TotalProduct.Value);
 
-                    if (outputAccount.Errors != null)
+                    if (outputAccount.Errors != null && outputAccount.Errors?.Count > 0)
                     {
                         output.Errors.AddRange(outputAccount.Errors);
                         return output;

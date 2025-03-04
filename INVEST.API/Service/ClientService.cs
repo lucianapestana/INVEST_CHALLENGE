@@ -31,7 +31,7 @@ namespace INVEST.API.Service
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao obter os registros", ex);
+                throw new Exception("Ocorreu um erro ao efetuar o login", ex);
             }
         }
 
