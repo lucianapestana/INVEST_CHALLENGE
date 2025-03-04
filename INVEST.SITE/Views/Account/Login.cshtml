@@ -1,0 +1,19 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+}
+
+<h2 class="text-center mb-4 text-success">Login</h2>
+<div>
+    <div class="mb-3">
+        <label for="user" class="form-label">Usuário</label>
+        <input type="text" id="user" class="form-control" name="username"/>
+        <span id="span-login-user" class="fs-6 text-danger d-none">Campo obrigatório.</span>
+    </div>
+    <div class="mb-3">
+        <label for="password" class="form-label">Senha</label>
+        <input type="password" id="password" class="form-control" name="password"/>
+        <span id="span-login-password" class="fs-6 text-danger d-none">Campo obrigatório.</span>
+    </div>
+    <button type="button" id="btnLogin" class="btn btn-success w-100">Login</button>
+    <span id="msgError" class="fs-5 text-danger d-block mt-4 pb-0 text-center"></span>
+</div>

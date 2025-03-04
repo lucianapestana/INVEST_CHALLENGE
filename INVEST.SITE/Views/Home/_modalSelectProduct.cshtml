@@ -1,0 +1,65 @@
+﻿<div class="modal fade" id="modal-select-product" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="modal-select-product" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title text-success" id="title-modal"></h4>
+			</div>
+			<div class="modal-body">
+				<div class="align-itens-center mb-3 container-fluid fs-5 text-muted">
+					<div id="alert-modal" class="row d-none">
+						<div class="alert alert-danger text-center" role="alert">
+							<span id="message-alert"></span>
+						</div>
+					</div>
+					<div class="row">
+						<span class="modal-title text-center fs-5 text-secondary fw-bold mb-4" id="title-balance-modal">
+							Saldo Atual:
+							<span id="balance-client-modal"></span>
+						</span>
+					</div>
+					<div class="row">
+						<div class="col-12 mb-3">
+							<div class="d-flex flex-wrap align-items-center">
+								<div class="col-12 col-md-4">
+									<label class="col-form-label fw-bold">Preço unitário:</label>
+								</div>
+								<div class="col-12 col-md-8">
+									<span id="unit-price-modal"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-12 mb-3">
+							<div class="d-flex flex-wrap align-items-start">
+								<div class="col-12 col-md-4">
+									<label class="col-form-label fw-bold">Quantidade:</label>
+								</div>
+								<div class="col-8 col-md-6">
+									<input type="text" id="qt-product" class="form-control" />
+									<span id="span-qt-product" class="fs-6 text-danger d-none">Campo obrigatório.</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-12 mt-4">
+							<div class="d-flex flex-wrap align-items-center fw-bold">
+								<div class="col-12 col-md-2">
+									<label class="col-form-label">Total:</label>
+								</div>
+								<div class="col-8 col-md-10">
+									<span id="total-value">R$ 0,00</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button id="btn-close-modal" type="button" class="btn btn-secondary">CANCELAR</button>
+				<button id="btn-confirm-buy" type="button" class="btn btn-success">CONFIRMAR</button>
+			</div>
+		</div>
+	</div>
+</div>

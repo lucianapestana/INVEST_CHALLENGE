@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>@ViewData["Title"] INVEST</title>
+
+	<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+	<link rel="stylesheet" href="~/INVEST.SITE.styles.css" asp-append-version="true" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet">
+</head>
+<body class="bg-light d-flex flex-column">
+	<header class="w-100">
+		<nav class="navbar navbar-expand-sm navbar-light bg-white border-bottom box-shadow mb-3 w-100">
+			<div class="container-fluid text-center">
+				<h3 class="w-100 text-wrap text-success text-md-start"><b>INVEST</b> - Investimentos</h3>
+				<h4 class="w-100 text-secondary text-md-end">Seu saldo atual é: <b><span id="balance-client"></span></b></h4>
+			</div>
+		</nav>
+
+	</header>
+	<div class="container d-flex flex-column vh-100">
+		<main role="main" class="pb-3">
+			<div class="row">
+				@RenderBody()
+			</div>
+		</main>
+
+		<partial name="_modalInfo" />
+	</div>
+
+	<footer class="w-100 bg-white border-top text-muted justify-content-between navbar fixed-bottom">
+		<div class="w-100 text-center">
+			&copy; 2025 - INVEST - Todos os direitos reservados.
+		</div>
+	</footer>
+
+	<script src="~/lib/jquery/dist/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="~/js/site.js" asp-append-version="true"></script>
+
+	@await RenderSectionAsync("scripts_site", required: false)
+</body>
+</html>
