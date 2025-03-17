@@ -32,7 +32,7 @@ namespace INVEST.API.TEST.Service
             // Assert
             Assert.True(result?.AccountsClients?.Count > 0);
             Assert.True(result?.AccountsClients?.FirstOrDefault()?.Balance >= 0);
-            Assert.False(result.Errors != null);
+            Assert.False(result.Errors.Count() > 0);
         }
 
         [Theory(DisplayName = "Validate the customer's account balance in the order - Error Balance.")]

@@ -66,7 +66,7 @@ namespace INVEST.API.TEST.Service
             // Assert
             Assert.True(result?.Products?.Count > 0);
             Assert.True(result?.Products?.FirstOrDefault()?.Stock >= 0);
-            Assert.False(result.Errors != null);
+            Assert.False(result.Errors.Count() > 0);
         }
 
         [Theory(DisplayName = "Validate the product stock in the order - Error Stock.")]
